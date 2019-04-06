@@ -1,91 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-us">
   <head>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Fatebringer | Game</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/half-slider.css" rel="stylesheet">
-    
-    <!-- Setting Icon -->
-    <link rel="icon" type="image/jpg" href="EtxrnaLogo.jpg"/>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | FatebringerBuildWEBGL</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/FatebringerWEBGLBuild.json", {onProgress: UnityProgress});
+    </script>
   </head>
-  <style>
-    @font-face { 
-        font-family: Usedfont; src: url('Alien Cyborg.ttf');
-    }
-    body {
-      padding-top: 54px;
-      font-family: Usedfont
-    }
-
-    @media (min-width: 992px) {
-      body {
-        padding-top: 56px;
-      }
-    }
-    .bg-image-full {
-      background: no-repeat center center scroll;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      background-size: cover;
-      -o-background-size: cover;
-      height: 400px;
-      @media (min-width: 992px) {
-          height: 450px;
-      }
-    }
-    .navbar-nav > li{
-      padding-right:30px;
-      padding-left:10px;
-    }
-    .navbar-default {
-      background-color:black;
-      background-image: none;
-      background-repeat: no-repeat;
-     }
-  </style>
-  <script>
-      var height=screen.availHeight;
-      var width=screen.availWidth;
-  </script>
-
-  <body style="background:url('background.jpg')">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#" style="font-size: 33px; color:red">FATEBRINGER</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto, menu" style="font-size: 25px">
-          </ul>
-        </div>
+  <body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">FatebringerBuildWEBGL</div>
       </div>
-    </nav>
-    <object id="UnityObject" classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
-    width="1500" height="600"
-    codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
-    <param name="unity3d" value="WebPlayer.unity3d" />
-    <embed id="UnityEmbed" src="FatebringerWEBGLBuild/index.html" width="420" height="750"
-    type="application/vnd.unity" pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
-    </object>
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    </div>
   </body>
-
 </html>
